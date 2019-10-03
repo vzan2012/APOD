@@ -1,0 +1,58 @@
+/* Custom Styles - Start  */
+
+body {
+  font-size: 13px;
+  position: relative;
+}
+
+.navbar-brand {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.content-container {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  min-height: 500px;
+}
+
+.media-section {
+  text-align: center;
+}
+
+.video-player {
+  position: relative;
+  width: 450px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.d-img {
+  border: 1px solid #ccc;
+  width: 100%;
+}
+
+.explanation p {
+  font-size: 15px;
+  line-height: 30px;
+}
+
+.footer-wrapper {
+  position: relative;
+}
+
+.footer-wrapper nav {
+  display: block;
+  color: #fff;
+}
+
+/* Custom Styles - End   */
+
+@media (max-width: 995px) {
+  .navbar-brand {
+    display: inline-block;
+    width: auto;
+  }
+}
