@@ -39,6 +39,10 @@ body {
   line-height: 30px;
 }
 
+.sdate-wrapper {
+  text-align: right;
+}
+
 .footer-wrapper {
   position: relative;
 }
