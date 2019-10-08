@@ -35,19 +35,29 @@ function showData() {
 // Display the Data
 const displayData = data => {
   console.log(data);
-  title.textContent = `${data.title}`;
-  // datewrapper.innerHTML = `<span><strong>Date: </strong>${data.date}</span>`;
-  datewrapper.innerHTML = `<span><strong>Date: </strong>${formatDate(
-    data.date
-  )}</span>`;
-  datewrapper.className += " mb-3";
-  if (data.media_type && data.media_type === "image") {
-    mediaSection.innerHTML = `<img src="${data.url}" title="" class="img-fluid d-img" />`;
-  } else if (data.media_type && data.media_type === "video") {
-    mediaSection.innerHTML = `<iframe class="video-player" src="${data.url}"></iframe>`;
+
+  if (data.title) {
+    title.textContent = `${data.title}`;
+    // datewrapper.innerHTML = `<span><strong>Date: </strong>${data.date}</span>`;
+    datewrapper.innerHTML = `<span><strong>Date: </strong>${formatDate(
+      data.date
+    )}</span>`;
+    datewrapper.className += " mb-3";
+    if (data.media_type && data.media_type === "image") {
+      mediaSection.innerHTML = `<img src="${data.url}" title="" class="img-fluid d-img" />`;
+    } else if (data.media_type && data.media_type === "video") {
+      mediaSection.innerHTML = `<iframe class="video-player" src="${data.url}"></iframe>`;
+    }
+    explanation.className += " mt-3 mb-3";
+    explanation.innerHTML = `<p>${data.explanation}</p>`;
+  } else {
+    const contentContainer = document.querySelector(".content-container");
+    // const titleContentWrapper = document.querySelector('.titleContent-wrapper').remove();
+    const div = document.createElement("div");
+    div.className = "alert alert-danger";
+    div.innerHTML = `${data.msg}`;
+    contentContainer.insertBefore(div, contentContainer.childNodes[0]);
   }
-  explanation.className += " mt-3 mb-3";
-  explanation.innerHTML = `<p>${data.explanation}</p>`;
 };
 
 // Get the Year for the Footer

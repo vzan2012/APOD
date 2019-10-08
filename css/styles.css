@@ -60,3 +60,19 @@ body {
     width: auto;
   }
 }
+
+@media (max-width: 800px) {
+
+  .titleContent-wrapper {
+    order: 2;
+  }
+
+  .sdate-wrapper {
+    order: 1;
+  }
+
+  #btn-show-data {
+    display: block;
+    margin: 0 auto 30px;
+  }
+}
