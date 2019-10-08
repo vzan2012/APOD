@@ -82,7 +82,7 @@ const displayData = data => {
 
     setTimeout(() => {
       document.querySelector(".error-alert").remove();
-      // reloadPage();
+      reloadPage();
     }, 2000);
   }
 };
